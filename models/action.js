@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
       },
-      moveToScene: {
+      target: {
         type: DataTypes.STRING
       }
     },
