@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/api/action-log", (req, res) => {
-  const target = req.query.target;
+  const target = req.body.target;
   return db.action
     .create({ target })
     .then(action => res.send(action))
