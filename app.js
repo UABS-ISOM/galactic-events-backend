@@ -19,5 +19,8 @@ app.post("/api/action-log", (req, res) => {
     .then(action => res.send(action))
     .catch(err => res.send(err));
 });
+app.get("/api/action-log", (req, res) => {
+  db.action.findAll().then(records => res.send(records));
+});
 
 module.exports = app;
